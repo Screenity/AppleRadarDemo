@@ -12,12 +12,8 @@ import DeviceActivity
 struct MainView: View, AlertViewMaker {
     
     @StateObject var model = MainViewModel()
-    
     @State private var context = DeviceActivityReport.Context("Total Activity")
-    @State private var filter = DeviceActivityFilter(
-        users: .children,
-        devices: .all
-    )
+    @State private var filter = DeviceActivityFilter(users: .children, devices: .all)
     
     var body: some View {
         NavigationView {
